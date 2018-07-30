@@ -1,7 +1,12 @@
+<?php 
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("location:../Vista/login.php");
+    exit();
+
+}
+?>
 <html>
-
-
-<!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:36:08 GMT -->
 <head>
 
     <meta charset="utf-8">
