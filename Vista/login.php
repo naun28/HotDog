@@ -72,36 +72,50 @@
 </head>
 <body>
     <img id="img" src="../Content/img/mosaico.jpg" alt="">
-   <div class="middle-box text-center loginscreen animated fadeInDown">
-    <div>
-        <div>
-            <center><h2>Bienvenido</h2></center>
-            <h1 class="logo-name">HD</h1>
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
 
+            <div class="col-md-6">
+                <h2 class="font-bold">Mision</h2>
+
+                <p>
+                    Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
+                </p>
+                <h2 class="font-bold">Vision</h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    <form class="m-t" method="POST" action="../Modelo/validalogin.php" autocomplete="on" >
+                         <center><h2 class="font-bold">BIENVENIDO</h2></center>
+                        <div class="form-group">
+                            <input style="color: black;font-weight: bold;" class="form-control" type="Text" name="user" required autofocus="on" placeholder="Usuario" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input style="color: black;font-weight: bold;" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
+                        </div>
+                        <button type="submit" class="btn btn-danger block full-width m-b">Login</button><br>
+                    </form>
+                    <p class="m-t">
+                        <small>Sistema de ventas &copy; 2018</small>
+                    </p>
+                </div>
+            </div>
         </div>
-        
-        <form class="m-t" method="POST" action="../Modelo/validalogin.php" autocomplete="on" >
-
-                    <div class="form-group">
-                        
-                        <input style="color: black;font-weight: bold;" class="form-control" type="Text" name="user" required autofocus="on" placeholder="Usuario" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input style="color: black;font-weight: bold;" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
-                    </div>
-
-                    <button class="btn btn-danger block full-width m-b"  type="submit" name="action">Entrar</button>
-
-                    <?php
-                    if (isset($_GET['error']) == true) {
-                        echo "<font style='color: red; font-weight: bold;'><p><center>Usuario o contraseña incorrecto</center></p></font>";
-                    }
-                    ?>
-
-                </form>
-           <center><p class="m-t"> <small>Hot-Dogs &copy; 2018</small> </p></center> 
+        <hr/>
+        <div class="row">
+            <div class="col-md-6">
+                &copy; Hot-Dogs Edwin
+            </div>
+            <div class="col-md-6 text-right">
+               <small>2018</small>
+            </div>
+        </div>
     </div>
-</div>
+  
 
 </body>
 </html>

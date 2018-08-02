@@ -115,17 +115,23 @@
         </div>
     </div>
     <div class="col-lg-6" >
-        <form method="post" action="../Modelo/RegistrarVenta.php">
-            <label class="control-label" for="order_id" hidden="">Producto</label>
-                    <input type="hidden" id="nompro"  value=""  placeholder="Producto" class="form-control">
-                     <label class="control-label" for="status" hidden="">PRECIO</label>
-                    <input type="hidden" id="precio" value="" placeholder="Precio" class="form-control" required="required">
-                    <br>
-                    
+       <form method="post" action="../Modelo/RegistrarVenta.php">
+        <input type="hidden" name="venta" id="venta" class="form-control venta" >
+        <input type="hidden" name="empleado" value="<?php $nombre = utf8_encode($_SESSION["nombres"]);
+                   $apellido = utf8_encode($_SESSION["apellidos"]);
+                 $empleado = $nombre." ".$apellido;  
+                 echo $empleado; ?>">
+        <div class="form-group col-md-12" style="margin-left: 66%;">
+            <div class="col-md-4">
+            <input class="form-control " type="hidden" name="fecha" value="<?php 
+                           date_default_timezone_set("America/Hermosillo");
+                           echo date('Y-m-d'); ?>"  id="fecha">
+            </div>
+        </div>
         <div class="col-lg-4 text-center">
             <div class="widget style1 red-bg">
                 <div class="row vertical-align">                    
-                    <i class="fa-1x"><b>TOTAL VENTA</b></i>
+                    <i class="fa-1x"><b>TOTAL</b></i>
                    <h2 class="font-bold suma" id="suma">0</h2>
                 </div>
             </div>
@@ -134,11 +140,10 @@
             <div class="widget style1 red-bg">
                 <div class="row vertical-align">
                     <i class="fa-1x"><b>RECIBIDO</b></i>
-                    <input type="number" name="recibido" min="0" style="color: black" id="pago"  value="" class="form-control" onchange="cambio();">       
+                    <input type="number" name="recibido" min="5" style="color: black" id="pago"  value="" class="form-control" onchange="cambio();" required="recibido" autofocus="cambio">
                 </div>
             </div>
         </div>
-
         <div class="col-lg-4 text-center">
             <div class="widget style1 navy-bg">
                 <div class="row vertical-align">                                
@@ -147,8 +152,9 @@
                 </div>
             </div>
         </div>
-        <input type="submit"  value="Terminar venta" class="btn btn-w-m btn-danger col-md-12" onclick="Venta();" disabled="disabled" id="terminar">
-    </form>
+        <button type="submit" id="terminar" class="btn btn-primary dim col-md-12 demo1" disabled="disabled"><i class="fa fa-check"></i> Terminar Venta</button>
+        
+       </form>
 
        <div class="ibox float-e-margins">
 

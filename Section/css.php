@@ -36,7 +36,7 @@
     <link href="../Content/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
 
     <link href="../Content/css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
-
+<link href="../Content/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../Content/alertifyjs/css/alertify.css">
     <link rel="stylesheet" type="text/css" href="../Content/alertifyjs/css/themes/default.css">
      <link href="../Content/css/plugins/dataTables/datatables.min.css" rel="stylesheet">

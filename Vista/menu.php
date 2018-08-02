@@ -2,10 +2,10 @@
     <li class="">
         <a aria-expanded="false" role="button" href="venta.php">Venta</a>
     </li>
-   <!-- <li class="">
-        <a aria-expanded="false" role="button" href="productos.php">Inventario</a>
+  <li class="">
+        <a aria-expanded="false" role="button" href="productos.php">Productos</a>
     </li>
-     <li class="dropdown">
+     <!--  <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inventario <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
             <li><a href="agregaproducto.php">Agregar productos</a></li>
@@ -40,8 +40,12 @@
                 </ul>
 
                 <ul class="nav navbar-top-links navbar-right">
-                    <li>
-                        <a href="../Controlador/Salir.php">
+                   <?php $nombre = utf8_encode($_SESSION["nombres"]);
+                   $apellido = utf8_encode($_SESSION["apellidos"]);
+                 $empleado = $nombre." ".$apellido;  
+                 echo $empleado; ?>
+                   <li>
+                    <a href="../Controlador/Salir.php">
                             <i class="fa fa-sign-out"></i> Salir
                         </a>
                     </li>

@@ -75,9 +75,70 @@
     <script src="../Content/js/plugins/dataTables/datatables.min.js"></script>
 
     <script src="../Content/alertifyjs/alertify.js"></script>
-     <!-- Page-Level Scripts -->
-    
+    <!-- Sweet alert -->
+    <script src="../Content/js/plugins/sweetalert/sweetalert.min.js"></script>
 
+<script>
+   
+    $(document).ready(function () {
+     $('.demo1').click(function(){
+        swal({title:"Venta Registrada", 
+            text: "LISTO!",
+            imageUrl: '../Content/img/bien.png',
+            showConfirmButton: false,
+            timer: 2000
+        })
+              
+        });
+
+        $('.demo2').click(function(){
+            swal({
+                title: "Listo!",
+                text: "Presiona OK!",
+                type: "success",
+                timer: 6000
+            });
+        });
+
+        $('.demo3').click(function () {
+            swal({
+                title: "Deseas CANCELAR esta opcion?",
+                text: "Al CANCELAR se quitara de tu lista!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Si, Cancelar!",
+                closeOnConfirm: false
+            }, function () {
+                swal("Cancelado!", "Esta opcion se quito de tu lista correctamente!", "success");
+            });
+        });
+
+        $('.demo4').click(function () {
+            swal({
+                        title: "Deseas ELIMINAR?",
+                        text: "Al ELIMINAR esta opcion se quitara de tu lista",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "Si, ELIMINAR!",
+                        cancelButtonText: "No, CANCELAR!",
+                        closeOnConfirm: false,
+                        closeOnCancel: false },
+                    function (isConfirm) {
+                        if (isConfirm) {
+                            swal("ELIMINADO!", "Se elimino correctamente", "success");
+                        } else {
+                            swal("Cancelado", "Usted a cancelado", "error");
+                        }
+                    });
+        });
+
+
+    });
+
+</script>
+     <!-- Page-Level Scripts -->
     <script>
         $(document).ready(function(){
 
@@ -487,7 +548,9 @@
         });
 
     </script>
+
 <script type="text/javascript">
+
     function dogo(){
      //$(document).ready(function(){
       var cod=$("#hotdog").val();
@@ -798,9 +861,9 @@ function momiapa(){
            
             var monto=cantidad*precio;
            if (monto >= 1) {
-
-            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs Delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
+            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs Delete'><i class='icon-trash bigger-120'></i> Cancelar</button></td></tr>");
              }
+
             $("#codigo").val("");
             $("#cantidad").val("");
 
@@ -818,6 +881,8 @@ function momiapa(){
            });
          var suma = data.reduce(function(a,b){ return a+b; },0);
          $("#suma").html(suma);
+         var venta = data.reduce(function(a,b){ return a+b; },0);
+         $("#venta").val(venta);
          $("#terminar").attr("disabled",false);
          
         
@@ -833,8 +898,8 @@ function momiapa(){
           var pago=$("#pago").val();
           var cam=parseFloat(pago)-parseFloat(sum);
           $(".cambio").html("$ "+cam); 
-         
-          
+          $(".cambi").val("$ "+cam); 
+        
       });
            
            
@@ -853,79 +918,96 @@ $(document).on('click', '.Delete', function (event) {
           $("#terminar").attr("disabled",true);
          }
      });
-function Venta(){
-  $(document).ready(function(){
-             
-           
-          var suma=$(".suma").html();
-          var sum= parseFloat(suma);
-        
-          $.ajax({
-            url: "vendido.php",
-           // dataType: 'json',
-            type: "POST",
-            dataType: 'json',
-            data: {suma:sum},
-            success: function(data){
-              
-            }
-             
-        });
-          inser();
-          
-          
-                         /*$(".suma").html("");
-                         $("#pago").val("");
-                         $(".cambio").html("");*/
-                          });
-                        }
-
-    function inser(){
-   $(document).ready(function(){
-         var yapuso=0;
-          $('#productos > tbody > tr').each(function(){
-                var id=$(this).find('td').eq(5).html();
-                var descripcion=$(this).find('td').eq(1).html();
-                var proc = $(this).find('td').eq(0).html();
-                var can = $(this).find('td').eq(3).html();
-                var preciou  = $(this).find('td').eq(2).html();
-                var monto=$(this).find('td').eq(4).html();
-               
-                         $.ajax({
-                             beforeSend: function(){
-                              },
-                             url: 'procesar_venta.php',
-                             type: 'POST',
-                             data: '&proc='+proc+'&cantidad='+can+'&preciou='+preciou+'&descripcion='+descripcion+'&id='+id,
-                             success: function(x){
-                                  
-                                  var n = noty({
-                                   text: "Procesando venta...  articulo actual: "+proc,
-                                   theme: 'relax',
-                                   layout: 'topLeft',
-                                   type: 'success',
-                                   timeout: 2000,
-                                  });
-                               /*if(yapuso==0){
-                               llena_ticket_archivo(cod,can,preciou,descripcion_art,yapuso,monto,$("#totales").html(),$("#paga_con").val(),$("#el_cambio").val(),n_tic);
-                               yapuso=1;
-                               }else{
-                               llena_ticket_archivo(cod,can,preciou,descripcion_art,yapuso,monto,$("#totales").html(),$("#paga_con").val(),$("#el_cambio").val(),n_tic);
-                               }*/
-                              },
-                             error: function(jqXHR,estado,error){
-                               $("#errores").html('Error... ');
-                              }
-                             });
-                           });
-          alert("venta Realizada");
-          $(".suma").html("");
-          $("#pago").val("");
-          $(".cambio").html("");
-          $("#tbody").empty();
-          
-      });
-           
-           
-         }
 </script>
+
+<script type="text/javascript">
+   
+  function deleteAjax(Id_Producto) {
+    if (alertify.confirm('Esta seguro de que desea eliminar este producto?','El elemento se eliminara permanentemente', function(){
+      alertify.success('Peoducto Elininado'),
+      $.ajax({
+          type: 'post',
+          url: '../Controlador/EliminarProductoController.php',
+          data:{delete_id:Id_Producto},
+          success:function(data){
+
+            location.href ="../Vista/productos.php";
+          }
+      });
+     },
+     function(){alertify.error('Operacion Cancelada')})) {
+
+
+    }
+  }
+
+ </script>
+<!-- mostrar datos productos -->
+<script async="async">
+    $(document).ready(function(){
+        
+
+        listarProductos();
+
+    });
+    var listarProductos = function(){
+        var table = $("#producs").DataTable({
+                destroy:true,
+                pageLength: 5,
+                responsive: true,
+
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'ExampleFile'},
+                    {extend: 'pdf', title: 'ExampleFile'},
+                 
+                ],
+
+            "ajax":{
+                "method":"POST",
+                "url":"../Controlador/productosController.php",
+                 error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY PRODCUTOS PARA MOSTRAR",
+                            type: "warning"
+
+                        });
+                    }
+            },
+            "columns":[
+                {"data":"Id_Producto","visible": false},
+                {"data":"Codigo"},
+                {"data":"Nombre"},
+                {"data":"Precio_Unitario"},
+                {"data":"Descripcion"},
+                {"data":"Cantidad"},
+                {"defaultContent": "<center><button class='edit btn btn-primary dim btn-md' data-toggle='modal' data-target='#myModal6'><i class='fa fa-edit'></i></button></center>"}
+            ]
+
+        });
+
+        
+        obtener_data_edit("#producs tbody",table);
+    }
+       var obtener_data_edit = function (tbody, table) {
+        $(tbody).on("click","button.edit", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var Id_Producto = $("#Id_Producto").val(data.Id_Producto),
+                Codigo = $("#Codigo").val(data.Codigo),
+                Nombre = $("#Nombre").val(data.Nombre),
+                Precio_Unitario = $("#Precio_Unitario").val(data.Precio_Unitario),
+                Descripcion = $("#Descripcion").val(data.Descripcion),
+                Cantidad = $("#Cantidad").val(data.Cantidad);
+
+        });
+       
+    }
+   
+
+</script>
+<!--Estructura del Modal-->
+<?php include '../Section/modalEditProductos.php'; ?>
+
+
