@@ -1,14 +1,12 @@
-<?php 
-	
-require('conec.php');
+<?php
 
-$id=$_GET['aidiuser'];
+$id_usuario = $_POST['id_usuario'];
 
+$conexion   = mysqli_connect("localhost", "root", "", "dogos");
 
-mysqli_query($con, "DELETE FROM usuarios WHERE id = $id");
+if (!empty($id_usuario)) {
 
-mysqli_close($con);
-header('Location: ../Vista/usuarios.php');
-
-
-?>
+$q = ("DELETE FROM usuarios where id_usuario ='" . $id_usuario . "'");
+$ejecutar_q = mysqli_query($conexion, $q) or die("error al insertar");
+}
+header("location: ../Vista/usuarios.php");

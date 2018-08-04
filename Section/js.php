@@ -45,6 +45,8 @@
 
     <!-- MENU -->
     <script src="../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<!-- Select2 -->
+    <script src="../Content/js/plugins/select2/select2.full.min.js"></script>
 
     <!-- Color picker -->
     <script src="../Content/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
@@ -61,9 +63,7 @@
     <!-- Date range picker -->
     <script src="../Content/js/plugins/daterangepicker/daterangepicker.js"></script>
 
-    <!-- Select2 -->
-    <script src="../Content/js/plugins/select2/select2.full.min.js"></script>
-
+    
     <!-- TouchSpin -->
     <script src="../Content/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
 
@@ -77,7 +77,24 @@
     <script src="../Content/alertifyjs/alertify.js"></script>
     <!-- Sweet alert -->
     <script src="../Content/js/plugins/sweetalert/sweetalert.min.js"></script>
-
+<script>
+function VerPass() {
+    var x = document.getElementById("pass");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+function VerPas() {
+    var x = document.getElementById("passs");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
 <script>
    
     $(document).ready(function () {
@@ -92,12 +109,12 @@
         });
 
         $('.demo2').click(function(){
-            swal({
-                title: "Listo!",
-                text: "Presiona OK!",
-                type: "success",
-                timer: 6000
-            });
+            swal({title:"Editado Correctamente", 
+            text: "LISTO!",
+            imageUrl: '../Content/img/bien.png',
+            showConfirmButton: false,
+            timer: 20000
+        })
         });
 
         $('.demo3').click(function () {
@@ -1010,4 +1027,76 @@ $(document).on('click', '.Delete', function (event) {
 <!--Estructura del Modal-->
 <?php include '../Section/modalEditProductos.php'; ?>
 
+<!-- mostrar datos de usuarios -->
+<script>
+    $(document).ready(function(){
 
+        listar();
+
+    });
+    var listar = function(){
+        var table = $("#dt_usuarios").DataTable({
+            pageLength: 5,
+                responsive: true,
+
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'ExampleFile'},
+                    {extend: 'pdf', title: 'ExampleFile'},
+                 
+                ],
+                "destroy":true,
+
+            "ajax":{
+                "method":"POST",
+                "url":"../Controlador/usuarioController.php",
+                 error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY USUARIOS AGREGADOS",
+                            type: "warning"
+
+                        });
+                    }
+            },
+            "columns":[
+                {"data":"id_usuario","visible": false},
+                {"data":"nombres"},
+                {"data":"apellidos"},
+                {"data":"user"},
+                {"data":"pass","visible": false},
+                {"data":"tipouser"},
+                {"defaultContent": "<center><button class='editUser btn btn-primary dim btn-md' data-toggle='modal' data-target='#myModal7'><i class='fa fa-edit'></i></button><button class='eliminaUser btn btn-danger dim btn-md' data-toggle='modal' data-target='#myModal8'><i class='fa fa-trash'></i></button></center>"}
+            ]
+
+        });
+        obtener_data_eliminaUser("#dt_usuarios tbody",table);
+        obtener_data_editUsuario("#dt_usuarios tbody",table);
+    }
+     var obtener_data_editUsuario = function (tbody, table) {
+        $(tbody).on("click","button.editUser", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var id_usuario = $("#id_usuario").val(data.id_usuario),
+                nombres = $("#nombres").val(data.nombres),
+                apellidos = $("#apellidos").val(data.apellidos),
+                user = $("#user").val(data.user),
+                pass = $("#pass").val(data.pass),
+                tipouser = $("#tipouser").val(data.tipouser);
+
+        });
+       
+    }
+    var obtener_data_eliminaUser = function (tbody, table) {
+        $(tbody).on("click","button.eliminaUser", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var id_usuario = $("#id_usuario").val(data.id_usuario);
+
+        });
+       
+    }
+</script>
+
+<!--Estructura del Modal-->
+<?php include '../Section/modalEliminarUser.php'; ?>
+<?php include '../Section/modalEditUsuarios.php'; ?>

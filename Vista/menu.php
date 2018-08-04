@@ -1,9 +1,12 @@
 <ul class="nav navbar-nav" >
     <li class="">
-        <a aria-expanded="false" role="button" href="venta.php">Venta</a>
+        <a aria-expanded="false" role="button" href="venta.php">Venta <i class="fa fa-shopping-cart"></i></a>
     </li>
   <li class="">
-        <a aria-expanded="false" role="button" href="productos.php">Productos</a>
+        <a aria-expanded="false" role="button" href="productos.php">Productos <i class="fa fa-cubes"></i></a>
+    </li>
+    <li class="">
+        <a aria-expanded="false" role="button" href="usuarios.php">Usuarios <i class="fa fa-user-circle-o"></i></a>
     </li>
      <!--  <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inventario <span class="caret"></span></a>

@@ -19,7 +19,7 @@
     <link href="../Content/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
 
     <link href="../Content/css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
-
+ <link href="../Content/css/plugins/select2/select2.min.css" rel="stylesheet">
     <link href="../Content/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
 
     <link href="../Content/css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 
     <link href="../Content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
 
-    <link href="../Content/css/plugins/select2/select2.min.css" rel="stylesheet">
+   
 
     <link href="../Content/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
 
