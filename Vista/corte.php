@@ -4,7 +4,7 @@ if (!isset($_SESSION["user"])) {
     header("location:../Vista/login.php");
     exit();
 
-}    
+}
 ?>
 <html>
 <head>
@@ -40,10 +40,7 @@ if (!isset($_SESSION["user"])) {
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                     <!-- CONTENIDO DE LA PAGINA -->
-                        <?php include('../Section/cont_usuarios.php'); ?>
-                        <?php include('../Section/modalUsuarios.php'); ?> 
-                        
-
+                        <?php include('../Section/cont_corte.php'); ?>
                     <!-- _______________________ -->
                     </div>
                 </div>    

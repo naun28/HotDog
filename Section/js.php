@@ -98,6 +98,10 @@ function VerPas() {
 <script>
    
     $(document).ready(function () {
+        $("#btnLimpiar").click(function(event) {
+           $("#formLimpiar")[0].reset();
+            });
+        
      $('.demo1').click(function(){
         swal({title:"Venta Registrada", 
             text: "LISTO!",
@@ -1090,7 +1094,7 @@ $(document).on('click', '.Delete', function (event) {
     var obtener_data_eliminaUser = function (tbody, table) {
         $(tbody).on("click","button.eliminaUser", function(){
             var data = table.row($(this).parents("tr")).data();
-            var id_usuario = $("#id_usuario").val(data.id_usuario);
+            var id_usuario = $("#id_user").val(data.id_usuario);
 
         });
        

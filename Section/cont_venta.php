@@ -16,7 +16,7 @@
               <div class="col-sm-3" >
                 <div class="form-group">
                     <label class="control-label" for="order_id">HotDog</label>
-                   <button id="hotdog" value="1" class="btn btn-primary  dim btn-large-dim" onclick="dogo()" style="width: 100%; height: 15%;"><img src="../Content/img/Hotdog.png" style="width: 100%; height: 100%;"></button>
+                   <button id="hotdog" value="1" class="btn btn-primary  dim btn-large-dim" onclick="dogo()" style="width: 100%; height: 15%;" responsive><img src="../Content/img/Hotdog.png" style="width: 100%; height: 100%;"></button>
                 </div>
                  </div>
                  <div class="col-sm-3" >

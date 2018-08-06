@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label>Tipo de Usuario</label>
-                        <select class="select2_demo_1 form-control " id="tipouser" name="tipouser">
+                        <select class="select2_demo_1 form-control"  name="tipouser">
                             <option value="Administrador"> Administrador</option>
                             <option value="Empleado"> Empleado</option>
                         </select>

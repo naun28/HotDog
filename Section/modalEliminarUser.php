@@ -10,7 +10,7 @@
                 <div class="modal-body">
                     <CENTER><h4>¿DESEA ELIMINAR ESTE USUARIO?</h4></CENTER>
                         <form method="POST" action="../Controlador/eliUsuario.php">
-                            <input type="hidden"  id="id_usuario" name="id_usuario" placeholder="id_usuario" class="form-control" readonly="id_usuario">
+                            <input type="hidden"  id="id_user" name="id_usuario" placeholder="id_usuario" class="form-control" readonly="id_usuario">
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
