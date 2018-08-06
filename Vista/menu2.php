@@ -9,13 +9,6 @@
             <li><a href="corte_final.php">Corte de caja <i class="fa fa-money"></i> <i class="fa fa-money"></i> <i class="fa fa-usd"></i></a></li>
         </ul>
     </li>
-    
-    <li class="">
-        <a aria-expanded="false" role="button" href="productos.php">Productos <i class="fa fa-cubes"></i></a>
-    </li>
-    <li class="">
-        <a aria-expanded="false" role="button" href="usuarios.php">Usuarios <i class="fa fa-user-circle-o"></i></a>
-    </li>
 </ul>
 <ul class="nav navbar-top-links navbar-right">
    <?php $nombre = utf8_encode($_SESSION["nombres"]);

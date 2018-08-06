@@ -60,5 +60,31 @@ if ($tipouser === "Administrador") {
         exit();
     }
 }
+if ($tipouser === "Empleado") {
+    if ($row["user"] === $usuario && $row["pass"] === $password) {
+        session_start();
+        $_SESSION["nombres"]   = $nombres;
+        $_SESSION["apellidos"] = $apellidos;
+        $_SESSION["id_usuario"] = $id_usuario;
+        $_SESSION["user"] = $usuario;
+        $_SESSION["tipouser"] = $tipouser;
+
+        echo "
+                <script>
+                var mensaje = 'sesión iniciada';
+                alert(mensaje);
+                </script>";
+
+        header("location: ../Vista/inicio.php");
+
+    } else {
+        echo "
+                <script type='text/javascript'>
+                alert('Usuario o contraseña incorrecto');
+                </script>";
+        header("location: ../Vista/login.php?error=1");
+        exit();
+    }
+}
 
 ?>

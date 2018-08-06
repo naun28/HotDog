@@ -552,8 +552,9 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 .navbar .dropdown-menu {
   margin-top: 0;
 }
+/*color del navbar*/ 
 .top-navigation .navbar-brand {
-  background: #ca3f3f;
+  background: #ed5565;
   color: #fff;
   padding: 15px 25px;
 }

@@ -30,7 +30,14 @@ if (!isset($_SESSION["user"])) {
                 <a href="inicio.php" class="navbar-brand">Hot-Dog Edwin</a>
             </div>
             <div class="navbar-collapse collapse" id="navbar">
-                <?php include('menu.php') ?>
+                <?php
+                $empleado = $_SESSION["tipouser"];
+                if ($empleado == "Administrador") {
+                    include('menu.php'); 
+                 } else{
+                    include('menu2.php');
+             }
+                ?>
             </div>
         </nav>
         </div>
