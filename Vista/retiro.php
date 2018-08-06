@@ -47,7 +47,7 @@ if (!isset($_SESSION["user"])) {
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                     <!-- CONTENIDO DE LA PAGINA -->
-                        <?php include('../Section/cont_corte.php'); ?>
+                        <?php include('../Section/cont_retiro.php'); ?>
                     <!-- _______________________ -->
                     </div>
                 </div>    

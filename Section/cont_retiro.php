@@ -41,7 +41,7 @@
 
 		<div class="form-group pull-right" id="data_1">
 			<div class="input-group "><br>
-				<input type="submit" class=" btn btn-success dim" value="Terminar corte">
+				<input type="submit" class=" btn btn-success dim" value="Retirar Efectivo">
 			</div>
 		</div>
     

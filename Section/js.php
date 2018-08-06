@@ -941,28 +941,6 @@ $(document).on('click', '.Delete', function (event) {
      });
 </script>
 
-<script type="text/javascript">
-   
-  function deleteAjax(Id_Producto) {
-    if (alertify.confirm('Esta seguro de que desea eliminar este producto?','El elemento se eliminara permanentemente', function(){
-      alertify.success('Peoducto Elininado'),
-      $.ajax({
-          type: 'post',
-          url: '../Controlador/EliminarProductoController.php',
-          data:{delete_id:Id_Producto},
-          success:function(data){
-
-            location.href ="../Vista/productos.php";
-          }
-      });
-     },
-     function(){alertify.error('Operacion Cancelada')})) {
-
-
-    }
-  }
-
- </script>
 <!-- mostrar datos productos -->
 <script async="async">
     $(document).ready(function(){
@@ -1104,3 +1082,4 @@ $(document).on('click', '.Delete', function (event) {
 <!--Estructura del Modal-->
 <?php include '../Section/modalEliminarUser.php'; ?>
 <?php include '../Section/modalEditUsuarios.php'; ?>
+
