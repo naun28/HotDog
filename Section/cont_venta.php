@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="col-MD-6">
+    <div class="col-md-6">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
                         <CENTER><h3>ORDENAR</h3></CENTER>
@@ -13,73 +13,73 @@
             </div>
             <div class="ibox-content">
               <div class="row">
-              <div class="col-sm-3" >
+              <div class="col-md-3 col-xs-4" >
                 <div class="form-group">
                     <label class="control-label" for="order_id">HotDog</label>
                    <button id="hotdog" value="1" class="btn btn-primary  dim btn-large-dim" onclick="dogo()" style="width: 100%; height: 15%;" responsive><img src="../Content/img/Hotdog.png" style="width: 100%; height: 100%;"></button>
                 </div>
                  </div>
-                 <div class="col-sm-3" >
+                 <div class="col-md-3 col-xs-4" >
                 <div class="form-group">
-                    <label class="control-label" for="order_id">HotDog d/Wini</label>
+                    <label class="control-label" for="order_id">HD d/Wini</label>
                    <button id="dogodoble" value="4" class="btn btn-primary  dim btn-large-dim" onclick="dogodoble()" style="width: 100%; height: 15%;"><img src="../Content/img/Hotdog.png" style="width: 100%; height: 100%;"></button>
                 </div>
                  </div>
-                 <div class="col-sm-3" >
+                 <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">HotDog/Papas</label>
+                    <label class="control-label" for="order_id">HD/Papas</label>
                    <button id="dogoconpa" value="2" class="btn btn-primary  dim btn-large-dim" onclick="dogoconpa()" style="width: 100%; height: 15%;"><img src="../Content/img/hdpapas.png"  style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">HotDog/d/Papas</label>
+                    <label class="control-label" for="order_id">HD/d/Papas</label>
                    <button id="dogodopa" value="5" class="btn btn-primary  dim btn-large-dim" onclick="dogodopa()" style="width: 100%; height: 15%;"><img src="../Content/img/hdpapas.png"  style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">Orden de PAPAS</label>
+                    <label class="control-label" for="order_id">O de papas</label>
                    <button id="papas" value="3" class="btn btn-primary  dim btn-large-dim" onclick="papas()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
                     <label class="control-label" for="order_id">Momia</label>
                    <button id="momia" value="6" class="btn btn-primary  dim btn-large-dim" onclick="momia()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">Momia c/papas</label>
+                    <label class="control-label" for="order_id">M c/papas</label>
                    <button id="momiapa" value="7" class="btn btn-primary  dim btn-large-dim" onclick="momiapa()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">Momia Picada</label>
+                    <label class="control-label" for="order_id">M Picada</label>
                    <button id="momiapic" value="8" class="btn btn-primary  dim btn-large-dim" onclick="momiapic()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">SalchiPapas</label>
+                    <label class="control-label" for="order_id">SP</label>
                    <button id="salchipapas" value="9" class="btn btn-primary  dim btn-large-dim" onclick="salchipapas()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">Dogo Momia</label>
+                    <label class="control-label" for="order_id">D. Momia</label>
                    <button id="dogomomia" value="10" class="btn btn-primary  dim btn-large-dim" onclick="dogomomia()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
-                    <label class="control-label" for="order_id">dogo Momia c/p</label>
+                    <label class="control-label" for="order_id">DM c/p</label>
                    <button id="dogomomiapa" value="11" class="btn btn-primary  dim btn-large-dim" onclick="dogomomiapa()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
                </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-md-3 col-xs-4" >
                  <div class="form-group">
                     <label class="control-label" for="order_id">Wini</label>
                    <button id="wini" value="12" class="btn btn-primary  dim btn-large-dim" onclick="wini()" style="width: 100%; height: 15%;"><img src="../Content/img/papas.png " style="width: 100%; height: 100%;"></button>
