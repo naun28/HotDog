@@ -77,7 +77,7 @@ if (!isset($_SESSION["user"])) {
 
         </div>
         </div>
-
+    </div>
 
 <?php include('../Section/js.php'); ?>
 

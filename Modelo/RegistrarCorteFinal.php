@@ -16,5 +16,5 @@ $que = ("UPDATE ventas set status_corte = '$status_corte', status_retiro='$statu
 
 $ejec_q = mysqli_query($con, $que) or die("error al insertar");
 
-header("location: ../Vista/login.php");
+header("location: ../Controlador/Salir.php");
 echo "<br> Registro Insertado Correctamente! <br>";

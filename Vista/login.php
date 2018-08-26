@@ -61,7 +61,7 @@
     }
     #img{
         position: fixed;
-        filter: blur(4px);
+       
         width: 100%;
         height: 100%;
 
@@ -69,55 +69,30 @@
      
 </style>
 
-   
+   <?php include('../Section/css.php'); ?>
 </head>
-<body>
-    <img id="img" src="../Content/img/mosaico.jpg" alt="">
-    <div class="loginColumns animated fadeInDown">
-        <div class="row">
-
-            <div class="col-md-6">
-               
-               <h2 class="font-bold">Mision</h2>
-
-                <p>
-                    Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
-                </p>
-                <h2 class="font-bold">Vision</h2>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </p> 
-
-            </div>
-            <div class="col-md-6">
-                <div class="ibox-content">
-                    <form class="m-t" method="POST" action="../Modelo/validalogin.php" autocomplete="on" >
-                         <center><h2 class="font-bold">BIENVENIDO</h2></center>
-                        <div class="form-group">
-                            <input style="color: black;font-weight: bold;" class="form-control" type="Text" name="user" required autofocus="on" placeholder="Usuario" autocomplete="off">
-                        </div>
-                        <div class="form-group">
-                            <input style="color: black;font-weight: bold;" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
-                        </div>
-                        <button type="submit" class="btn btn-danger block full-width m-b">Login</button><br>
-                    </form>
-                    <p class="m-t">
-                        <small>Sistema de ventas &copy; 2018</small>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <hr/>
-        <div class="row">
-            <div class="col-md-6">
-                &copy; Hot-Dogs Edwin
-            </div>
-            <div class="col-md-6 text-right">
-               <small>2018</small>
-            </div>
-        </div>
-    </div>
+<body class="top-navigation">
+  <div id="wrapper">
+        <!-- style="background-image: url('../Content/img/mosaico.jpg');" -->
   
-
+        <nav class="navbar navbar-static-top" role="navigation" style="background-color: #e08c8c;">
+            <div class="navbar-header">
+               
+                <a href="#" class="navbar-brand">Hot-Dog Edwin</a>
+            </div>
+                <form role="form" class="form-inline m-t" method="POST" action="../Modelo/validalogin.php" autocomplete="on" style="margin-left: 64%; margin-top: 0.5%;">
+                    <div class="form-group">
+                        <input style="color: black;font-weight: bold;" class="form-control" type="Text" name="user" required autofocus="off" placeholder="Usuario" autocomplete="off">
+                        <input style="color: black;font-weight: bold;" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
+                        <button type="submit" class="btn btn-danger">Entrar</button><br>
+                    </div>
+                </form>
+                      
+            
+            
+        </nav>
+        
+    <img class="img-responsive" id="img" src="../Content/img/logo.jpg" alt="">
+    
 </body>
 </html>
