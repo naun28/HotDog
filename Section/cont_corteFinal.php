@@ -26,7 +26,7 @@
 		<div class="form-group col-sm-10" id="data_1">
 			<div class="input-group ">
 				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" readonly name="cortetotalfinal" id="cortetotal" maxlength="60"  class="form-control" value="<?php require ('../Controlador/cortefinalController.php'); ?>">
+				<input type="number" autocomplete="off" readonly name="cortetotalfinal" id="cortetotal" maxlength="60"  class="form-control" value="<?php require ('../Controlador/cortefinalController.php'); ?>" placeholder="NO HAY DINERO EN CAJA">
 			</div>
 		</div>
 		<label class="col-sm-2 control-label">Cantidad de caja</label>
@@ -34,14 +34,14 @@
 			<div class="input-group ">
 
 				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" name="cortecajafinal" id="cortecaja" maxlength="60"  class="form-control">
+				<input type="number" autocomplete="off" name="cortecajafinal" id="cortecaja" maxlength="60"  class="form-control" required="LLenar campo">
 			</div>
 		</div>
-    
+    	
 
 		<div class="form-group pull-right" id="data_1">
 			<div class="input-group "><br>
-				<input type="submit" class=" btn btn-success dim" value="Terminar corte">
+				<input type="submit" class=" btn btn-success dim" value="Terminar corte" id="corte">
 			</div>
 		</div>
     

@@ -15,5 +15,5 @@ $que = ("UPDATE ventas set status_retiro='$status_retiro' where fecha='" . $fech
 
 $ejec_q = mysqli_query($con, $que) or die("error al insertar");
 
-header("location: ../Vista/corte.php");
+header("location: ../Vista/retiro.php");
 echo "<br> Registro Insertado Correctamente! <br>";

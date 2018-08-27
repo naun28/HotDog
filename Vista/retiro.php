@@ -12,7 +12,7 @@ if (!isset($_SESSION["user"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hot-Dog | Ordenar</title>
+    <title>Hot-Dog | Retiros</title>
     
 <?php include('../Section/css.php'); ?>
 </head>

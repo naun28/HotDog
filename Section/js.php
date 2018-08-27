@@ -101,7 +101,6 @@ function VerPas() {
         $("#btnLimpiar").click(function(event) {
            $("#formLimpiar")[0].reset();
             });
-        
      $('.demo1').click(function(){
         swal({title:"Venta Registrada", 
             text: "LISTO!",

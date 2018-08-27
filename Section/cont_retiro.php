@@ -26,7 +26,7 @@
 		<div class="form-group col-sm-10" id="data_1">
 			<div class="input-group ">
 				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" readonly name="cortetotal" id="cortetotal" maxlength="60"  class="form-control" value="<?php require ('../Controlador/corteController.php'); ?>">
+				<input type="number" autocomplete="off" readonly name="cortetotal" id="cortetotal" maxlength="60"  class="form-control" value="<?php require ('../Controlador/corteController.php'); ?>" placeholder="NO HAY DINERO EN CAJA">
 			</div>
 		</div>
 		<label class="col-sm-2 control-label">Cantidad de caja</label>

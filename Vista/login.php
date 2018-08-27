@@ -79,19 +79,18 @@
             <div class="navbar-header">
                
                 <a href="#" class="navbar-brand">Hot-Dog Edwin</a>
-            </div>
-                <form role="form" class="form-inline m-t" method="POST" action="../Modelo/validalogin.php" autocomplete="on" style="margin-left: 64%; margin-top: 0.5%;">
+                <form role="form" class="form-inline m-t col-lg-12" method="POST" action="../Modelo/validalogin.php" autocomplete="on"  style="margin-top: -3%; margin-left: 820px;">
                     <div class="form-group">
                         <input style="color: black;font-weight: bold;" class="form-control" type="Text" name="user" required autofocus="off" placeholder="Usuario" autocomplete="off">
                         <input style="color: black;font-weight: bold;" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
                         <button type="submit" class="btn btn-danger">Entrar</button><br>
                     </div>
                 </form>
-                      
+            </div>
+                  
             
             
         </nav>
-        
     <img class="img-responsive" id="img" src="../Content/img/logo.jpg" alt="">
     
 </body>
