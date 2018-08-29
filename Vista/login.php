@@ -4,7 +4,7 @@
 <head>
     <title>Login</title>
     <?php include "../Section/css.php";?>
-     <style>
+    <style>
     html,body {
 
         background-color: #ebe9e5;
@@ -16,6 +16,10 @@
         text-shadow: 5px 5px 15px 15px #434343;
 
 
+    }
+    .topnav .login-container {
+        float: left;
+        margin-top: 2%;
     }
 
     .full-height {
@@ -61,37 +65,42 @@
     }
     #img{
         position: fixed;
-       
+
         width: 100%;
         height: 100%;
 
     }
-     
+
 </style>
 
-   <?php include('../Section/css.php'); ?>
+<?php include('../Section/css.php'); ?>
 </head>
 <body class="top-navigation">
   <div id="wrapper">
-        <!-- style="background-image: url('../Content/img/mosaico.jpg');" -->
-  
-        <nav class="navbar navbar-static-top" role="navigation" style="background-color: #e08c8c;">
-            <div class="navbar-header">
-               
-                <a href="#" class="navbar-brand">Hot-Dog Edwin</a>
-                <form role="form" class="form-inline m-t col-lg-12" method="POST" action="../Modelo/validalogin.php" autocomplete="on"  style="margin-top: -3%; margin-left: 820px;">
-                    <div class="form-group">
-                        <input style="color: black;font-weight: bold;" class="form-control" type="Text" name="user" required autofocus="off" placeholder="Usuario" autocomplete="off">
-                        <input style="color: black;font-weight: bold;" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
-                        <button type="submit" class="btn btn-danger">Entrar</button><br>
-                    </div>
-                </form>
+    <!-- style="background-image: url('../Content/img/mosaico.jpg');" -->
+
+    <nav class="navbar navbar-static-top" role="navigation" style="background-color: #e08c8c;">
+
+        <div class="navbar-header">
+         <div class="topnav">
+            <a href="#" class="navbar-brand">Hot-Dog</a>
+
+        </div>
+    </div> 
+    <ul class="nav navbar-nav navbar-right">
+        <form role="form" class="form-inline" method="POST" action="../Modelo/validalogin.php" autocomplete="on" style="margin-top: 3%;">
+            <div class="row navbar-nav ml-auto">
+                <div class="col-lg-12 col-xs-12" >
+                    <input style="color: black;font-weight: bold; height: 27px;" size="10" class="form-control" type="Text" name="user" required autofocus="off" placeholder="Usuario" autocomplete="off">
+                    <input style="color: black;font-weight: bold; height: 27px;" size="10" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
+                    <button type="submit" class="btn btn-danger btn-sm">Entrar</button><br>
+                </div>
             </div>
-                  
-            
-            
-        </nav>
-    <img class="img-responsive" id="img" src="../Content/img/logo.jpg" alt="">
-    
+        </form> 
+    </ul>
+
+</nav>
+<img class="img-responsive" id="img" src="../Content/img/carro.jpg" alt="">
+
 </body>
 </html>
