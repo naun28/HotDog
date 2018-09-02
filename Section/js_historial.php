@@ -1,3 +1,4 @@
+    
     <script src="../Content/js/jquery-3.1.1.min.js"></script>
     <script src="../Content/js/bootstrap.js"></script>
     <script src="../Content/js/bootstrap.min.js"></script>
@@ -461,7 +462,15 @@
                 "destroy":true,
                 "ajax":{
                 "method" : "POST",
-                "url": "../Controlador/fechasController.php?fecha="+datestring+""
+                "url": "../Controlador/fechasController.php?fecha="+datestring+"",
+                error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY RETIROS EN ESTA FECHA",
+                            type: "warning"
+
+                        });
+                    }
                                    
                 },
                 "columns":[

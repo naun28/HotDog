@@ -52,6 +52,7 @@ if (!isset($_SESSION["user"])) {
                     </div>
                 </div>    
             </div>
+            <?php include('../Section/js_historial.php'); ?>
         <div class="footer">
             <div>
                  <strong>Copyright</strong> Hot-Dogs Edwin &copy; <?php echo date('Y') ?>
@@ -60,9 +61,6 @@ if (!isset($_SESSION["user"])) {
 
         </div>
         </div>
-
-
-<?php include('../Section/js_historial.php'); ?>
 
 </body>
 
