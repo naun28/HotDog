@@ -34,7 +34,7 @@
 			<div class="input-group ">
 
 				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" name="cortecaja" id="cortecaja" maxlength="60"  class="form-control">
+				<input type="number" autocomplete="off" name="cortecaja" id="cortecaja" maxlength="60"  class="form-control" required="">
 			</div>
 		</div>
     

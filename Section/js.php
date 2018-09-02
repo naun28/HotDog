@@ -1,4 +1,4 @@
-<script src="../Content/js/jquery-3.1.1.min.js"></script>
+    <script src="../Content/js/jquery-3.1.1.min.js"></script>
     <script src="../Content/js/bootstrap.min.js"></script>
     <script src="../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -94,6 +94,73 @@ function VerPas() {
         x.type = "password";
     }
 }
+</script>
+<script type="text/javascript">
+
+       $(document).ready(function () {
+
+                var hoy = new Date();
+                var dd = hoy.getDate();
+                var mm = hoy.getMonth()+1; //hoy es 0!
+                var yyyy = hoy.getFullYear();
+
+               if(dd<10) {
+                    dd='0'+dd
+                }
+
+               if(mm<10) {
+                     mm='0'+mm
+                }
+
+                hoy = mm+'/'+dd+'/'+yyyy;
+
+                listar(hoy);
+
+
+                $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: false,
+                autoclose: true
+            });
+
+            });
+
+       function fech(e){
+
+            lista(e);
+
+
+       }
+
+       var lista = function(e){
+
+            var datestring = moment(e.value).format('YYYY/MM/DD');
+
+            var table = $("#hist_retiros").DataTable({
+                "destroy":true,
+                "ajax":{
+                "method" : "POST",
+                "url": "../Controlador/fechasController.php?fecha="+datestring+""
+                                   
+                },
+                "columns":[
+                    {"data":"id_corte","visible": false},
+                    {"data":"cortetotal"},
+                    {"data":"cortecaja"},
+                    {"data":"fecha"},
+                    {"data":"empleado"}
+                    
+
+                ]
+            });
+
+
+            
+
+        }
+
 </script>
 <script>
    
@@ -905,7 +972,6 @@ function momiapa(){
          $("#venta").val(venta);
          $("#terminar").attr("disabled",false);
          
-        
       });
            
            
@@ -918,12 +984,19 @@ function momiapa(){
           var pago=$("#pago").val();
           var cam=parseFloat(pago)-parseFloat(sum);
           $(".cambio").html("$ "+cam); 
-          $(".cambi").val("$ "+cam); 
+          $(".cambi").val("$ "+cam);
+
+         if (cam < 0 ) {
+          swal({
+              type: 'error',
+              title: 'PAGO INCOMPLETO',
+              text: '¡Falta dinero para realizar el pago de su orden!'
+            })
+         }
         
       });
-           
-           
-         }
+          
+    }
 
 $(document).on('click', '.Delete', function (event) {
     event.preventDefault();
@@ -1081,4 +1154,42 @@ $(document).on('click', '.Delete', function (event) {
 <!--Estructura del Modal-->
 <?php include '../Section/modalEliminarUser.php'; ?>
 <?php include '../Section/modalEditUsuarios.php'; ?>
+
+
+<script type="text/javascript">
+//validar campo vacio
+   $(document).ready(function(){
+  
+  var boton;
+  
+  boton = $('#terminar');
+  
+  boton.on('click', function(){
+    
+     var valor_input, valor_pago;
+    
+    valor_input = $('#pago');
+    valor_pago = valor_input.val();
+    
+    if(valor_pago === ''){
+      swal({
+              type: 'error',
+              title: 'NO HAY PAGO',
+              text: '¡Falta dinero para realizar el pago de su orden!'
+            })
+    }else{
+      swal({title:"Venta Registrada", 
+            text: "LISTO!",
+            imageUrl: '../Content/img/bien.png',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    }
+    
+  }); 
+  
+});
+
+</script>
+
 

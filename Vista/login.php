@@ -73,7 +73,7 @@
 
 </style>
 
-<?php include('../Section/css.php'); ?>
+
 </head>
 <body class="top-navigation">
   <div id="wrapper">
@@ -91,9 +91,10 @@
         <form role="form" class="form-inline" method="POST" action="../Modelo/validalogin.php" autocomplete="on" style="margin-top: 3%;">
             <div class="row navbar-nav ml-auto">
                 <div class="col-lg-12 col-xs-12" >
-                    <input style="color: black;font-weight: bold; height: 27px;" size="10" class="form-control" type="Text" name="user" required autofocus="off" placeholder="Usuario" autocomplete="off">
-                    <input style="color: black;font-weight: bold; height: 27px;" size="10" class="form-control" type="password" name="pass" required placeholder="Contraseña" autocomplete="off">
-                    <button type="submit" class="btn btn-danger btn-sm">Entrar</button><br>
+                    <input style="color: black;font-weight: bold; height: 27px;" size="10" class="form-control" type="Text" name="user" id="user" autofocus="off" placeholder="Usuario" autocomplete="off" pattern="^[a-zA-Z0-9]{2,10}" title="Solo permite hasta 10 letras y/o numeros" maxlength="10" required="">
+                    <input style="color: black;font-weight: bold; height: 27px;" size="10" class="form-control" type="password" name="pass" id="pass" placeholder="Contraseña" autocomplete="off" title="Solo permite hasta 8 caracteres" maxlength="8" required="">
+
+                    <button type="submit"id="entrar" class="btn btn-danger btn-sm">Entrar</button><br>
                 </div>
             </div>
         </form> 
@@ -103,4 +104,5 @@
 <img class="img-responsive" id="img" src="../Content/img/carro.jpg" alt="">
 
 </body>
+<?php include('../Section/js.php'); ?>
 </html>

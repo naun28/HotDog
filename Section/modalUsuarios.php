@@ -11,16 +11,16 @@
                     
                     <div class="form-group col-sm-6">
                         <label>Nombre(s)</label><input type="text" name="nombres" placeholder="Nombre(s)" class="form-control
-                        " pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
+                        " pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{2,50}" title="Solo permite hasta letras y la primera mayuscula"  required="">
                     </div>
                     <div class="form-group col-sm-6">
                          <label>Apellido(s)</label><input type="text"  name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
                     </div>
                     <div class="form-group col-md-6">
-                        <label>Usuario</label><input class="form-control" type="text"  name="user" placeholder="Nombre de Usuario">
+                        <label>Usuario</label><input class="form-control" type="text"  name="user" placeholder="Nombre de Usuario" pattern="^[a-zA-Z0-9]{2,10}" title="Solo permite hasta 10 letras y/o numeros" maxlength="10">
                     </div>
                     <div class="form-group col-md-6">
-                        <label>Contraseña</label><input type="password" id="passs" name="pass" placeholder="Contraseña" class="form-control"pattern="[A-Za-z0-9!?-]{6,8}" minlength="6" maxlength="8" required="" title="Minimo 6 caracteres y maximo 8"><input  class="icheckbox_square-green" style="position: relative;" type="checkbox" onclick="VerPas()"> Ver contraseña
+                        <label>Contraseña</label><input type="password" id="passs" name="pass" placeholder="Contraseña" class="form-control"pattern="[A-Za-z0-9!?-.]{4,8}" minlength="4" maxlength="8" required="" title="Minimo 6 caracteres y maximo 8"><input  class="icheckbox_square-green" style="position: relative;" type="checkbox" onclick="VerPas()"> Ver contraseña
                     </div>
                     <div class="form-group">
                         <label>Tipo de Usuario</label>

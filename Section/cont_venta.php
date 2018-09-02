@@ -152,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" id="terminar" class="btn btn-primary dim col-md-12 demo1" disabled="disabled"><i class="fa fa-check"></i> Terminar Venta</button>
+        <button type="submit" id="terminar" class="btn btn-primary dim col-md-12" disabled="disabled"><i class="fa fa-check"></i> Terminar Venta</button>
         
        </form>
 

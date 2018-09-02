@@ -5,8 +5,25 @@
     <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Caja <i class="fa fa-money"></i><span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
-            <li><a href="retiro.php">Retiro<i class="fa fa-money"></i> <i class="fa fa-money"></i></a></li>
-            <li><a href="corte_final.php">Corte de caja <i class="fa fa-money"></i> <i class="fa fa-money"></i> <i class="fa fa-usd"></i></a></li>
+            <li>
+                <a href="retiro.php">Retiro
+                    <i class="fa fa-money"></i> 
+                    <i class="fa fa-money"></i>
+                </a>
+            </li>
+            <li>
+                <a href="corte_final.php">Corte de caja
+                 <i class="fa fa-money"></i> 
+                 <i class="fa fa-money"></i> 
+                 <i class="fa fa-usd"></i>
+             </a>
+            </li>
+            <li>
+                <a href="historial.php">Historial
+                    <i class="fa fa-money"></i> 
+                    <i class="fa fa-money"></i>
+                </a>
+            </li>
         </ul>
     </li>
     
