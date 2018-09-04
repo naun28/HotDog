@@ -1,13 +1,16 @@
 <?PHP
 include "../Controlador/conexion.php";
-cn = Conectarse();
-$fecha = $_GET['fecha'];
-$select = "SELECT * FROM corte WHERE DATE(fecha) = '".DATE($fecha)."'";
+$cn    = Conectarse();
+$fech = $_GET['fecha'];
+
+//OR DATE(FechaIni) BETWEEN '" . DATE($fecha) . "' AND DATE(FechaFin) 
+
+$select = "SELECT * FROM corte WHERE DATE(fecha)  =  '" . DATE($fech) . "'" ;
 $result = mysqli_query($cn , $select);
 
 if (!$result) {
 
-    die(mysqli_error());
+    die(mysql_error());
 
 } else {
     $arreglo["data"] = [];

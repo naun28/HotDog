@@ -37,8 +37,8 @@
    <!-- NouSlider -->
    <script src="../Content/js/plugins/nouslider/jquery.nouislider.min.js"></script>
 
-   <!-- Switchery -->
-   <script src="../Content/js/plugins/switchery/switchery.js"></script>
+   <!-- Switchery 
+   <script src="../Content/js/plugins/switchery/switchery.js"></script>-->
 
     <!-- IonRangeSlider -->
     <script src="../Content/js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
@@ -60,8 +60,8 @@
     <!-- Image cropper -->
     <script src="../Content/js/plugins/cropper/cropper.min.js"></script>
 
-    <!-- Date range use moment.js same as full calendar plugin -->
-    <script src="../Content/js/plugins/fullcalendar/moment.min.js"></script>
+    <!-- Date range use moment.js same as full calendar plugin 
+    <script src="../Content/js/plugins/fullcalendar/moment.min.js"></script>-->
 
     <!-- Date range picker -->
     <script src="../Content/js/plugins/daterangepicker/daterangepicker.js"></script>
@@ -75,7 +75,7 @@
 
     <!-- Dual Listbox -->
     <script src="../Content/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
-    <script src="../Content/js/plugins/dataTables/dataTables.min.js"></script>
+    <script src="../Content/js/plugins/dataTables/datatables.min.js"></script>
 
     <script src="../Content/alertifyjs/alertify.js"></script>
     <!-- Sweet alert -->
@@ -391,26 +391,11 @@
         });
 
     </script>
-    <script>
-        $(document).ready(function(){
-            $('.dataTables-example').DataTable({
-                pageLength: 10,
-                responsive: true,
-                dom: '<"html5buttons"B>lTfgitp',
-                buttons: [
-                    {extend: 'excel', title: 'ExampleFile'},
-                    {extend: 'pdf', title: 'ExampleFile'},
-                ]
+    
 
-            });
-
-        });
-    </script>
-
-<script type="text/javascript">
+<script>
 
        $(document).ready(function () {
-     
 
                 var hoy = new Date();
                 var dd = hoy.getDate();
@@ -449,7 +434,7 @@
 
        var listar = function(e){
 
-            var datestring = moment(e.value).format('YYYY-MM-DD');
+            var datestring = moment(e.value).format('YYYY/MM/DD');
 
             var table = $("#retiros").DataTable({
                 pageLength: 10,
@@ -459,18 +444,31 @@
                     {extend: 'excel', title: 'Historial de retiros'},
                     {extend: 'pdf', title: 'Historial de retiros'},
                 ],
+
+                'columnDefs': [
+                {
+                    "targets": 1, // your case first column
+                    "className": "text-center"
+                },
+                {
+                    "targets": 2,
+                    "className": "text-center"
+                      
+                 },
+                 {
+                    "targets": 3,
+                    "className": "text-center"
+                      
+                 },
+                 {
+                    "targets": 4,
+                    "className": "text-center"
+                      
+                 }],
                 "destroy":true,
                 "ajax":{
                 "method" : "POST",
-                "url": "../Controlador/fechasController.php?fecha="+datestring+"",
-                error: function (result) {
-                        swal({
-                            title: "LISTA VACIA",
-                            text: "NO HAY RETIROS EN ESTA FECHA",
-                            type: "warning"
-
-                        });
-                    }
+                "url": "../Controlador/fechasController.php?fecha="+datestring+""
                                    
                 },
                 "columns":[
@@ -479,14 +477,9 @@
                     {"data":"cortecaja"},
                     {"data":"fecha"},
                     {"data":"empleado"}
-                    
-
                 ]
             });
-
-
-            
-
         }
 
+        
 </script>

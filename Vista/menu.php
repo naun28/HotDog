@@ -16,15 +16,11 @@
                  <i class="fa fa-usd"></i>
              </a>
             </li>
-            <li>
-                <a href="historial.php">Historial    
-                    <i class="fa fa-list-alt"></i> 
-                   
-                </a>
-            </li>
         </ul>
     </li>
-    
+    <li class="">
+        <a aria-expanded="false" role="button" href="historial.php">Historial <i class="fa fa-list-alt"></i></a>
+    </li>
     <li class="">
         <a aria-expanded="false" role="button" href="productos.php">Productos <i class="fa fa-cubes"></i></a>
     </li>
